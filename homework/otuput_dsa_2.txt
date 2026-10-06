@@ -1,0 +1,4 @@
+[Running] python -u "e:\Automation\dsa_interview_prep\homework\dsa_2.py"
+This letter -> a in this word -> aeroplane, repeated 2 times.
+
+[Done] exited with code=0 in 0.254 seconds

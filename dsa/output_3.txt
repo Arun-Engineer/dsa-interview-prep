@@ -3,3 +3,22 @@ True
 False
 
 [Done] exited with code=0 in 0.376 seconds
+
+4a9ff75 (HEAD -> main, origin/main, origin/HEAD) Day 3: sort function updated with fix
+914a6d1 Day 3: sort function added in inventory page
+5652933 Day 13: End to end checkout flow + new actions
+947f49d (feature/checkout) Day 2 : single specific item add to cart fucntion acdded
+f18e319  Day 2: cleaned version of Inventory page
+ac119ba Day 2 Inventory page added in pages of POM model
+1a05d08 Remove practice folder; keep portfolio framework-only
+f59b24c Day 2: POM model
+a6fa29b Day 2 DSA output
+5da893b Day 2: DSA problem
+b671aee Added readme file
+5e87646 Add conftest.py with shared fixtures (base_url, credentials)
+eff112e Add pytest.ini configuration
+40a665e Commiting rquiremnents.txt
+e27fcd5 Merge remote-tracking branch 'origin/main'
+bc66824 Initial commit: framework scaffold + login testS
+a8743f7 Initial commit
+(END)

@@ -11,7 +11,7 @@ def test_create_user_returns_201():
 # Drill 2: Test that the users list endpoint returns a non-empty list.
 
 def test_users_list_not_empty():
-    response = requests.post(f"{BASE_URL}/users")
+    response = requests.get(f"{BASE_URL}/users")
 
     data = response.json()
     assert len(data) > 0

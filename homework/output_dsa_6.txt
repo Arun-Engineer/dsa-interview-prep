@@ -1,0 +1,5 @@
+[Running] python -u "e:\Automation\dsa_interview_prep\homework\dsa_6.py"
+7
+5
+
+[Done] exited with code=0 in 0.442 seconds

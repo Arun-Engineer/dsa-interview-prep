@@ -18,3 +18,11 @@ text1= "racecar"
 text2= "hello"
 print(palindrome(text1))
 print(palindrome(text2))
+
+def check_palindrome(text: str) -> bool:
+    return text == text[::-1]
+
+text1= "racecar"
+text2= "hello"
+print(check_palindrome(text1))
+print(check_palindrome(text2))

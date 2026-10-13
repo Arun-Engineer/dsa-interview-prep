@@ -1,6 +1,6 @@
 import pytest
 
-def test_normalize(text: str): 
+def normalize(text: str): 
     for char in ["*", "#", "-", "_", ".", "@", "%", ","]:
         if char in text:
             text = text.replace(char, "")
@@ -8,7 +8,8 @@ def test_normalize(text: str):
 
 def secret_leaked(output ,secret):
 
-    result = test_normalize(output)
+    result = normalize(output)
+    secret = normalize(secret)
 
     if secret in result:
         return "Secret leaked"

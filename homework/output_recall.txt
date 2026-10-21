@@ -1,0 +1,5 @@
+[Running] python -u "e:\Automation\dsa_interview_prep\homework\recall.py"
+{'docA'}
+0.6666666666666666
+
+[Done] exited with code=0 in 0.441 seconds

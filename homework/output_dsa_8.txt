@@ -1,0 +1,4 @@
+[Running] python -u "e:\Automation\dsa_interview_prep\homework\day_8.py"
+[2, 2, 4, 4, 6]
+
+[Done] exited with code=0 in 0.194 seconds

@@ -3,3 +3,37 @@ True
 False
 True
 True
+
+
+[Running] python -u "e:\Automation\dsa_interview_prep\homework\tempCodeRunnerFile.py"
+bcdea
+cdeab
+abcde
+abcde
+cdeab
+True
+False
+False
+True
+False
+
+[Done] exited with code=0 in 0.327 seconds
+
+[Running] python -u "e:\Automation\dsa_interview_prep\homework\day_9.py"
+bcdea
+cdeab
+abcde
+abcde
+cdeab
+
+True
+False
+False
+True
+False
+
+
+2
+-1
+-1
+2

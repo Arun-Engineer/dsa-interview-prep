@@ -15,18 +15,30 @@
 
 # rotate_left(s,k)
 
-def rotate_left(s , k):
+
+def rotate_left(s, k):
+
+    if s == "":
+        return s
 
     if k == 0:
         return s
+
     elif len(s) < k:
         quotient = k % len(s)
+
+        if quotient == 0:
+            return s
+
         for i in range(quotient):
-            rotate = s[(i+1):] + s[:(i+1)]
+            rotate = s[(i + 1):] + s[:(i + 1)]
+
         return rotate
+
     else:
         for i in range(k):
-            rotated = s[(i+1):] + s[:(i+1)]
+            rotated = s[(i + 1):] + s[:(i + 1)]
+
         return rotated
 
 print(rotate_left("abcde", 1))
@@ -35,39 +47,39 @@ print(rotate_left("abcde", 0))
 print(rotate_left("abcde", 5))
 print(rotate_left("abcde", 7))
 
-def rotations(s1, s2):
+# def rotations(s1, s2):
 
-    if s1 == "":
-        return False
-    elif len(s1) != len(s2):
-        return False
-    else:
-        for i in range(len(s1)):
-            rotated = s1[i:] + s1[:i]
+#     if s1 == "":
+#         return True
+#     elif len(s1) != len(s2):
+#         return False
+#     else:
+#         for i in range(len(s1)):
+#             rotated = s1[i:] + s1[:i]
 
-            if rotated == s2:
-                return True
-        return False
+#             if rotated == s2:
+#                 return True
+#         return False
 
-print(rotations("abcde", "cdeab"))
-print(rotations("abcde", "abced"))
-print(rotations("abcde", "xyz"))
-print(rotations("hello", "llohe"))
-print(rotations("", ""))
+# print(rotations("abcde", "cdeab"))
+# print(rotations("abcde", "abced"))
+# print(rotations("abcde", "xyz"))
+# print(rotations("hello", "llohe"))
+# print(rotations("", ""))
 
-def rotation_index(s1, s2):
+# def rotation_index(s1, s2):
 
-    if len(s1) != len(s2):
-        return -1
+#     if len(s1) != len(s2):
+#         return -1
 
-    for i in range(len(s1)):
-        rotated = s1[i:] + s1[:i]
+#     for i in range(len(s1)):
+#         rotated = s1[i:] + s1[:i]
 
-        if rotated == s2:
-            return i
-    return -1
+#         if rotated == s2:
+#             return i
+#     return -1
 
-print(rotation_index("abcde", "cdeab"))
-print(rotation_index("abcde", "abced"))
-print(rotation_index("abcde", "xyz"))
-print(rotation_index("hello", "llohe"))
+# print(rotation_index("abcde", "cdeab"))
+# print(rotation_index("abcde", "abced"))
+# print(rotation_index("abcde", "xyz"))
+# print(rotation_index("hello", "llohe"))

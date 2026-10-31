@@ -1,0 +1,11 @@
+(.venv) PS E:\Automation\dsa_interview_prep> python -m pytest tests/test_dsa_9.py -v
+============================= test session starts =============================
+platform win32 -- Python 3.14.0, pytest-9.2.0, pluggy-1.7.0 -- E:\Automation\dsa_interview_prep\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\Automation\dsa_interview_prep
+collected 1 item                                                               
+
+tests/test_dsa_9.py::test_dsa_day_9 PASSED                               [100%]
+
+============================== 1 passed in 0.06s ==============================
+(.venv) PS E:\Automation\dsa_interview_prep> 

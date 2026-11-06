@@ -12,12 +12,16 @@ def rotate_left(s, k):
         return rotated
 
     if len(s) < k:
-        k = k - len(s)
+        k = k % len(s)
         for i in range(k+1):
             rotate = s[i:] + s[:i]
         return rotate
+
 
 print(rotate_left("abcdef", 2))
 print(rotate_left("abcdef", 6))
 print(rotate_left("abcdef", 10))
 print(rotate_left("abcdef", 3))
+print(rotate_left("abcdef", 13))
+print(rotate_left("", 3))
+print(rotate_left("abcdef", 0))

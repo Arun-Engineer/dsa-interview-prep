@@ -3,5 +3,9 @@ cdefab
 abcdef
 efabcd
 defabc
+bcdefa
+
+abcdef
+
 
 [Done] exited with code=0 in 0.928 seconds

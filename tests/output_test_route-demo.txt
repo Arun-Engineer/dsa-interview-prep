@@ -1,0 +1,10 @@
+(.venv) PS E:\Automation\dsa_interview_prep> python -m pytest tests/test_route_demo.py -v -s
+========================== test session starts ==========================
+platform win32 -- Python 3.14.0, pytest-9.2.0, pluggy-1.7.0 -- E:\Automation\dsa_interview_prep\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\Automation\dsa_interview_prep
+plugins: playwright-0.10.0
+collected 1 item                                                         
+
+tests/test_route_demo.py::test_fake_out_of_stock_page[chromium] Heading on screen: Out Of Stock
+PASSED

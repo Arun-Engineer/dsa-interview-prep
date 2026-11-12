@@ -1,0 +1,69 @@
+(.venv) PS E:\Automation\dsa_interview_prep> mkdir git-conflict-lab
+
+
+    Directory: E:\Automation\dsa_interview_prep
+
+
+Mode                 LastWriteTime         Length Name                   
+----                 -------------         ------ ----                   
+d-----        11/12/2026   2:09 PM                git-conflict-lab       
+
+
+(.venv) PS E:\Automation\dsa_interview_prep> cd git-conflict-lab
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git init
+Initialized empty Git repository in E:/Automation/dsa_interview_prep/git-conflict-lab/.git/
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> Set-Content greet.py "print('hello')"
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git add .
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   greet.py
+
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git commit -m "base"
+[master (root-commit) e4c9db5] base
+ 1 file changed, 1 insertion(+)
+ create mode 100644 greet.py
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git branch
+* master
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git switch -c feature
+Switched to a new branch 'feature'
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> Set-Content greet.py 'print("hello from feature")'
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git commit -am "feature: Change Greeting"
+[feature 8f4a841] feature: Change Greeting
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git switch main
+fatal: invalid reference: main
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git switch master
+Switched to branch 'master'
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> Set-Content greet.py 'print("hello from master")'
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git commit -am "master: change greeting"
+[master 97760e1] master: change greeting
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git merge feature
+Auto-merging greet.py
+CONFLICT (content): Merge conflict in greet.py
+Automatic merge failed; fix conflicts and then commit the result.
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   greet.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git add greet.py
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git commit -m "merge feature: resolve greeting conflict"
+[master 2fb0f5e] merge feature: resolve greeting conflict
+(.venv) PS E:\Automation\dsa_interview_prep\git-conflict-lab> git log --oneline --graph --all
+*   2fb0f5e (HEAD -> master) merge feature: resolve greeting conflict
+|\  
+| * 8f4a841 (feature) feature: Change Greeting
+* | 97760e1 master: change greeting
+|/  

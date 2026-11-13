@@ -1,0 +1,13 @@
+(.venv) PS E:\Automation\dsa_interview_prep> python -m pytest tests/test_dsa_10_two_pointers.py -v -s
+========================== test session starts ==========================
+platform win32 -- Python 3.14.0, pytest-9.2.0, pluggy-1.7.0 -- E:\Automation\dsa_interview_prep\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\Automation\dsa_interview_prep
+plugins: playwright-0.10.0
+collected 2 items                                                        
+
+tests/test_dsa_10_two_pointers.py::test_pair_sum PASSED
+tests/test_dsa_10_two_pointers.py::test_both_versions_agree PASSED
+
+=========================== 2 passed in 0.49s ===========================
+(.venv) PS E:\Automation\dsa_interview_prep> 

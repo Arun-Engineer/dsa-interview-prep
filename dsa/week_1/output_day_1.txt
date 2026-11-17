@@ -1,6 +1,4 @@
 dsa_interview_prep\dsa\week_1\day_1.py"
-Traceback (most recent call last):
-  File "e:\Automation\dsa_interview_prep\dsa\week_1\day_1.py", line 58, in <module>
-    assert total_price([10.5, 20.5, .5]) == 36.0, "1 failed: normal cart"
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: 1 failed: normal cart
+All 5 warm-up checks passed
+
+[Done] exited with code=0 in 0.151 seconds

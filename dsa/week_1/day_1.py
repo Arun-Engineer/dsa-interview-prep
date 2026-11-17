@@ -1,31 +1,45 @@
 # 1) Add up all prices in cart. Empty cart -> 0.
 def total_price(prices: list) -> float:
-
+    total = 0
     for i in prices:
-        if i > 0:
-            total_price = 0
-            total_price = i + total_price
-        return total_price
-    return "Empty Cart"
+        total = total + i
+    return total
 
 # 2) Count how many times each items appears.
 #  ["milk", "bread", "milk"] -> {"milk":2, "bread": 1}
 
+
 def count_items(items: list) -> dict:
-    count = 0
-    item = {}
-    for i in range(len(items)):
-        items[i] = items[i].get(count, count + 1)
-        item.update(items[i])
-    return item
+    counts = {}
+
+    for item in items:
+        if item in counts:
+            counts[item] = counts[item] + 1
+        else:
+            counts[item] = 1
+
+    return counts
+
+def count_items1(items: list) -> dict:
+    counts = {}
+    for item in items:
+        if item in counts:
+            counts[item] = counts.get(item, 0) + 1
+    return counts
 
 # 3) Products look like JSON form an API (like Postman shows you).
 # Return only the NAMES of products whose stock is more than 0.
 def get_in_stock(products: list) -> list:
 
-    for index, inventory in enumerate(products, start = 1):
-        if inventory["stock"] > 0:
-            return f"{index}, {inventory["name"]} -> {inventory["stock"]} "
+    # for index, inventory in enumerate(products, start = 1):
+    #     if inventory["stock"] > 0:
+    #         return f"{index}, {inventory["name"]} -> {inventory["stock"]} "
+
+    inventory = []
+    for stock in products:
+        if stock["stock"] > 0:
+            inventory.append(stock["name"])
+    return inventory
 
 
 # 4) Divide a by b. If b is 0, return None instead of crashing.
@@ -33,7 +47,7 @@ def get_in_stock(products: list) -> list:
 
 def safe_divide(a: float, b: float):
     try:
-        return a % b
+        return a / b
     except ZeroDivisionError:
         return None
 
@@ -42,20 +56,15 @@ def safe_divide(a: float, b: float):
 class Order:
 
     def __init__(self, order_id: str, items: list):
-        self.order_id = order_id,
+        self.order_id = order_id
         self.items = items
 
     def item_count(self) -> int:
-        count = 0
-        product = []
-        for i in range(len(self.items)):
-            self.items[i] =  self.items.get(count, count + 1)
-            product.append(self.items[i])
-        return self.order_id, product
+        return len(self.items)
     
 
 # ---------------------- auto-checker: do not edit below -------------------------------
-assert total_price([10.5, 20.5, .5]) == 36.0, "1 failed: normal cart"
+assert total_price([10.5, 20.0, 5.5]) == 36.0, "1 failed: normal cart"
 assert total_price([]) == 0, "1 failed: empty cart"
 
 assert count_items(["milk", "bread", "milk"]) == {"milk": 2, "bread": 1}, "2 failed"

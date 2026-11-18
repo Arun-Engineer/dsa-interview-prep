@@ -1,4 +1,5 @@
 # 1) Add up all prices in cart. Empty cart -> 0.
+# Empty cart [] -> returns 0
 def total_price(prices: list) -> float:
     total = 0
     for i in prices:
@@ -23,12 +24,17 @@ def count_items(items: list) -> dict:
 def count_items1(items: list) -> dict:
     counts = {}
     for item in items:
-        if item in counts:
-            counts[item] = counts.get(item, 0) + 1
+        
+        counts[item] = counts.get(item, 0) + 1
     return counts
 
 # 3) Products look like JSON form an API (like Postman shows you).
 # Return only the NAMES of products whose stock is more than 0.
+# products = [
+#      {"name": "milk", "stock": 5},
+#    {"name": "eggs", "stock": 0},
+#    {"name": "bread", "stock": 2},
+#] -> returns the products name when stock is not zero -> ["milk", "bread"]
 def get_in_stock(products: list) -> list:
 
     # for index, inventory in enumerate(products, start = 1):
@@ -44,7 +50,7 @@ def get_in_stock(products: list) -> list:
 
 # 4) Divide a by b. If b is 0, return None instead of crashing.
 # You must use try/except (not an  if-check)
-
+# when zero division error -> not going to crash returns none
 def safe_divide(a: float, b: float):
     try:
         return a / b
@@ -53,6 +59,7 @@ def safe_divide(a: float, b: float):
 
 # 5) An Order has an id and a list of items:
 # item_count() returns how many items are in the order.
+#order = Order("ORD-101", ["milk", "eggs", "bread"]) returns -> how many items in list for this order -> 3
 class Order:
 
     def __init__(self, order_id: str, items: list):
@@ -85,5 +92,6 @@ assert safe_divide(10, 0) is None, "4 failed: divideby zero"
 order = Order("ORD-101", ["milk", "eggs", "bread"])
 assert order.item_count() == 3, "5 failed"
 assert Order("ORD-102", []).item_count() == 0, "5 failed: empty order"
+print(count_items1(["milk", "bread", "milk"]))
 
 print("All 5 warm-up checks passed")

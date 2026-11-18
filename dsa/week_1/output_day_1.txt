@@ -132,3 +132,15 @@ quickcart-support-copilot> python -m app.llm_client
 
 quickcart-support-copilot> python -m app.llm_client
 {'answer': 'Delivery usually takes between 30 minutes to 2 hours, depending on your location and the time of day.', 'tokens': 64}
+
+after try/ except
+quickcart-support-copilot> python -m app.llm_client
+{'answer': 'Delivery usually takes between 30 minutes to 1 hour, depending on your location and the availability of items. You can track the estimated delivery time in the app.', 'tokens': 75}
+
+Invalid api key
+quickcart-support-copilot> python -m app.llm_client
+{'answer': None, 'tokens': 0, 'error': 'Invalid API Key'}
+
+No Internet
+\quickcart-support-copilot> python -m app.llm_client
+{'answer': None, 'tokens': 0, 'error': 'Could not reach OPENAI. Check Internet.'}

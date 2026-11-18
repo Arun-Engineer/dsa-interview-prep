@@ -8,7 +8,7 @@ def total_price(prices: list) -> float:
 
 # 2) Count how many times each items appears.
 #  ["milk", "bread", "milk"] -> {"milk":2, "bread": 1}
-
+# Empty list [] -> returns None
 
 def count_items(items: list) -> dict:
     counts = {}
@@ -35,6 +35,7 @@ def count_items1(items: list) -> dict:
 #    {"name": "eggs", "stock": 0},
 #    {"name": "bread", "stock": 2},
 #] -> returns the products name when stock is not zero -> ["milk", "bread"]
+# Empty Products [] -> returns None
 def get_in_stock(products: list) -> list:
 
     # for index, inventory in enumerate(products, start = 1):
@@ -60,6 +61,7 @@ def safe_divide(a: float, b: float):
 # 5) An Order has an id and a list of items:
 # item_count() returns how many items are in the order.
 #order = Order("ORD-101", ["milk", "eggs", "bread"]) returns -> how many items in list for this order -> 3
+# Order with no items -> item_count() returns None
 class Order:
 
     def __init__(self, order_id: str, items: list):
@@ -76,6 +78,7 @@ assert total_price([]) == 0, "1 failed: empty cart"
 
 assert count_items(["milk", "bread", "milk"]) == {"milk": 2, "bread": 1}, "2 failed"
 assert count_items([]) == {}, "2 failed: empty list"
+assert count_items1(["milk", "bread", "milk"]) == {"milk": 2, "bread": 1}, "2b failed"
 
 products = [
     {"name": "milk", "stock": 5},
@@ -92,6 +95,6 @@ assert safe_divide(10, 0) is None, "4 failed: divideby zero"
 order = Order("ORD-101", ["milk", "eggs", "bread"])
 assert order.item_count() == 3, "5 failed"
 assert Order("ORD-102", []).item_count() == 0, "5 failed: empty order"
-print(count_items1(["milk", "bread", "milk"]))
+
 
 print("All 5 warm-up checks passed")

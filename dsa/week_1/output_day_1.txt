@@ -3,6 +3,12 @@ All 5 warm-up checks passed
 
 [Done] exited with code=0 in 0.151 seconds
 
+\dsa_interview_prep\dsa\week_1\day_1.py"
+All 5 warm-up checks passed
+
+[Done] exited with code=0 in 0.202 seconds
+
+
 (.venv) PS E:\Automation\quickcart-support-copilot> python -m pip install openai python-dotenv
 Collecting openai
   Downloading openai-3.54.0-py3-none-any.whl.metadata (45 kB)

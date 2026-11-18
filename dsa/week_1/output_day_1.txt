@@ -118,3 +118,17 @@ tests
 .env
 requirements.txt
 (.venv) PS E:\Automation\quickcart-support-copilot> 
+
+\quickcart-support-copilot> python -m app.llm_client
+{'answer': 'Delivery usually takes between 30 minutes to 2 hours, depending on your location and the availability of items. You can track your order in real-timethrough the app.', 'tokens': 76}
+
+quickcart-support-copilot> python -m app.llm_client
+{'answer': 'Delivery usually takes between 30 minutes to 2 hours, depending on your location and the availability of items. You can track your order in real-timethrough the app.', 'tokens': 76}
+
+Temperature =  1
+
+quickcart-support-copilot> python -m app.llm_client
+{'answer': 'Delivery typically takes between 30 minutes to 1 hour, depending on your location and the availability of items. You can check the estimated deliverytime in the app during checkout.', 'tokens': 77}
+
+quickcart-support-copilot> python -m app.llm_client
+{'answer': 'Delivery usually takes between 30 minutes to 2 hours, depending on your location and the time of day.', 'tokens': 64}

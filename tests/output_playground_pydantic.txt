@@ -1,0 +1,18 @@
+(.venv) PS E:\Automation\quickcart-support-copilot> python -m app.playground_pydantic
+1:  answer='Delivery takes 10-20 minutes.' confidence=0.9 needs_human=False
+1 field:  0.9
+2:  1 validation error for SupportAnswer
+confidence
+  Input should be less than or equal to 1 [type=less_than_equal, input_value=1.5, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.14/v/less_than_equal
+3:  1 validation error for SupportAnswer
+confidence
+  Input should be less than or equal to 1 [type=less_than_equal, input_value=1.5, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.14/v/less_than_equal
+4:  Refunds take 3-5 days.
+5:  {'answer': 'Refunds take 3-5 days.', 'confidence': 0.8, 'needs_human': False}
+7:  1 validation error for SupportAnswer
+answer
+  Field required [type=missing, input_value={'confidence': 0.8, 'needs_human': False}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing
+(.venv) PS E:\Automation\quickcart-support-copilot> 

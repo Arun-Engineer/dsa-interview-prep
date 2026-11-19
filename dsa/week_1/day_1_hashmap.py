@@ -63,8 +63,15 @@ def two_sums(prices: list, budget: int):
         needed = budget - price
 
         if needed in seen:
-            return (seen[needed], i)
+            return [seen[needed], i]
         seen[price]= i
     return None
 
 print(two_sums([50, 20, 30, 80], 100))
+assert two_sums([50, 20, 30, 80], 100) == [1, 3], "B failed: normal (20+80)"
+assert two_sums([40, 60], 100) == [0, 1], "B filed: two items"
+assert two_sums([50, 50], 100) == [0,1],"B failed: duplicate prices"
+assert two_sums([50], 100) is None, "B failed: cant use same item twice"
+assert two_sums([], 100) is None, "B failed: empty"
+assert two_sums([10, 20], 100) is None, "B failed: no pair"
+print("Part B passed")

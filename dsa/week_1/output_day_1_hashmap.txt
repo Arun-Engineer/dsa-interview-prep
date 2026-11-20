@@ -11,3 +11,19 @@ dsa_interview_prep\dsa\week_1\day_1_hashmap.py"
 Part B passed
 
 [Done] exited with code=0 in 0.266 seconds
+
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        app/models.py
+        app/output_playground_pydantic.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+git log --oneline
+a41935f (HEAD -> main, origin/main, origin/HEAD) Initial project setup: LLM client with error handling

@@ -1,0 +1,7 @@
+[Running] python -u "e:\Automation\dsa_interview_prep\dsa\week_1\day_2_hashmap.py"
+Part A passed
+
+[Done] exited with code=0 in 0.172 seconds
+
+dsa_interview_prep\dsa\week_1\day_2_hashmap.py"
+Part B passed

@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+platform win32 -- Python 3.14.0, pytest-9.2.0, pluggy-1.7.0 -- E:\Automation\quickcart-support-copilot\.venv\scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\Automation\quickcart-support-copilot
+plugins: anyio-4.16.0
+collected 3 items                                                               
+
+tests/test_cold_rebuild.py::test_health_cold PASSED                       [ 33%]
+tests/test_cold_rebuild.py::test_empty_question_cold PASSED               [ 66%]
+tests/test_cold_rebuild.py::test_chat_fake_llm_cold PASSED                [100%]
+
+============================== 3 passed in 2.43s ===============================

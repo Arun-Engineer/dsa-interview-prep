@@ -32,7 +32,10 @@ print("Part A: all tests passed")
 # Part B - Write is_palindrome(word). It should return True if the word reads the same forwards and
 # backwards, like 'level' or 'racecar'. Dont build a reversal copy of the string.
 
+
 # what if empty "" is given as input.
+# what if empty "" is given as input
+
 
 def is_palindrome(word):
 
@@ -47,6 +50,7 @@ assert is_palindrome("Level") == True
 assert is_palindrome("racecar") == True
 assert is_palindrome("cat") == False
 assert is_palindrome("carracer") == False
+
 print("Part B: All test passed.")
 
 
@@ -67,4 +71,5 @@ assert is_palindrome("Level") == True
 assert is_palindrome("racecar") == True
 assert is_palindrome("cat") == False
 assert is_palindrome("carracer") == False
+
 print("Part B: All test passed.")

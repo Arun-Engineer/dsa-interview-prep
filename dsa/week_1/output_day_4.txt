@@ -1,0 +1,16 @@
+[Running] python -u "e:\Automation\dsa_interview_prep\dsa\week_1\day_4.py"
+[1, 3]
+Part A: all tests passed
+
+[Done] exited with code=0 in 0.188 seconds
+
+
+dsa_interview_prep\dsa\week_1\day_4.py"
+Part B: All test passed.
+
+[Done] exited with code=0 in 0.367 seconds
+
+dsa_interview_prep\dsa\week_1\day_4.py"
+Part B: All test passed.
+  
+[Done] exited with code=0 in 0.356 seconds

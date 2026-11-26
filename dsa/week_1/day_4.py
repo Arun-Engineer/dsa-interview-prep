@@ -50,7 +50,6 @@ assert is_palindrome("Level") == True
 assert is_palindrome("racecar") == True
 assert is_palindrome("cat") == False
 assert is_palindrome("carracer") == False
-
 print("Part B: All test passed.")
 
 
@@ -71,5 +70,4 @@ assert is_palindrome("Level") == True
 assert is_palindrome("racecar") == True
 assert is_palindrome("cat") == False
 assert is_palindrome("carracer") == False
-
 print("Part B: All test passed.")

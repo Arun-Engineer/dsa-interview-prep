@@ -31,3 +31,47 @@ It means there is a failure, it may be due to:
 ## 5. Install requirements/ .env file or leftout file when add . etc
 
 ## 5. One trap:
+
+---
+
+# Two Pointers Pattern
+
+## 1. Pattern - What the two fingers do
+
+Two fingers points to index 0 first start and last as `index(len(word) -1 )` by this way we are able to compare the values with our targets very easily and effectively until the before finger overlap `while left < right:`
+
+## 2. Tiny example
+
+```python
+def pair_with_sum(prices: list, target: int) -> dict:
+
+    left = 0
+    right = len(prices) - 1
+
+    while left < right:
+        sum = prices[left] + prices[right]
+
+        if sum == target:
+            return [left, right]
+
+        elif sum > target:
+            right = right - 1
+
+        else:
+            left = left + 1
+
+    return []
+
+
+print(pair_with_sum([100, 150, 200, 350, 450], 500))
+```
+
+## 3. why
+
+this is useful only when the sorted list is available and moreover its easy to identify the pairs in limited steps
+
+## 4. Trap
+
+we must use `<` not `<=` since it overlaps the value for example if target is 300 and low is pointing at 150 if less or eqaul and no pair matching earlier when the right reaches to 150 on using `<=` so 150+150 = 300 target acheived this is not pair this the same value added twice.
+
+## 5. we must use `.sort()` but original positions get replaced?

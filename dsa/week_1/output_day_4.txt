@@ -7,10 +7,18 @@ Part A: all tests passed
 
 dsa_interview_prep\dsa\week_1\day_4.py"
 Part B: All test passed.
+HEAD
+[Done] exited with code=0 in 0.367 seconds
+
 
 [Done] exited with code=0 in 0.367 seconds
 
 dsa_interview_prep\dsa\week_1\day_4.py"
 Part B: All test passed.
  
+[Done] exited with code=0 in 0.356 seconds
+
+dsa_interview_prep\dsa\week_1\day_4.py"
+Part B: All test passed.
+  
 [Done] exited with code=0 in 0.356 seconds

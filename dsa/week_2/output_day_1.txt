@@ -23,3 +23,8 @@ dsa_interview_prep\dsa\week_2\day_1.py"
 Task 2: All tests passed
 
 [Done] exited with code=0 in 0.167 seconds
+
+dsa_interview_prep\dsa\week_2\day_1.py"
+Task 2: All tests passed
+
+[Done] exited with code=0 in 0.286 seconds

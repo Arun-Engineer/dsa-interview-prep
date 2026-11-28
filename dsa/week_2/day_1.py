@@ -66,3 +66,31 @@ assert sorted_pairs([100, 150, 200], [400, 450, 500], 300) == []
 assert sorted_pairs([100, 150, 200], [50, 100], 300) == [200, 100]
 assert sorted_pairs([100, 150, 200], [150, 200, 250], 300) == [100, 200]
 print("Part B: All tests passed")
+
+# Task 1 Given a sorted list of prices and a budget return the two prices (not positions)that
+# adds up exactly to the budget.return an empty list if theres no pair.
+# pair_values_with_sum(one list)
+
+def pair_values_sum(a, budget):
+
+    left = 0
+    right = len(a) - 1
+
+    while left < right:
+        sum = a[left] + a[right]
+
+        if sum == budget:
+            return [a[left], a[right]]
+
+        elif sum > budget:
+            right = right - 1
+
+        else:
+            left = left + 1
+    return []
+
+assert pair_values_sum([50, 100, 150, 200, 250, 300], 300) == [50, 250]
+assert pair_values_sum([], 300) == []
+assert pair_values_sum([10, 50, 100, 200], 500) == []
+assert pair_values_sum([100, 250, 300], 500) == []
+print("Task 1: All tests passed")

@@ -1,0 +1,12 @@
+
+
+dsa_interview_prep\dsa\week_2\day_1.py"
+Part B: All tests passed
+
+[Done] exited with code=0 in 0.227 seconds
+
+dsa_interview_prep\dsa\week_2\day_1.py"
+Part A: all tests passed
+Part B: All tests passed
+
+[Done] exited with code=0 in 0.364 seconds

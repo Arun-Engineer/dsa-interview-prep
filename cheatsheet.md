@@ -75,3 +75,35 @@ this is useful only when the sorted list is available and moreover its easy to i
 we must use `<` not `<=` since it overlaps the value for example if target is 300 and low is pointing at 150 if less or eqaul and no pair matching earlier when the right reaches to 150 on using `<=` so 150+150 = 300 target acheived this is not pair this the same value added twice.
 
 ## 5. we must use `.sort()` but original positions get replaced?
+
+---
+
+## Cosine similarity (W2D1)
+
+### 1. Pattern
+
+first we have to calcualte the dot product , its nothing but list a x list b -> the sum up together and find the vector lengths square of individual list items  then mulitply the square values and then take the square root of final value and final thing of cosine similarity is dotproduct/ (length of A x length of B)
+
+### 2. Tiny example
+
+```python
+from app.embeddings import get_embedding, cosine_similarity
+
+a = get_embedding("My order hasn't arrived yet")
+b = get_embedding("Delivery is late")
+c = get_embedding("How do i change my password")
+
+print("Length of one embedding:", len(a))
+print("A vs B:", round (cosine_similarity(a,b), 3))
+print("A vs C:", round(cosine_similarity(b, c), 3))
+```
+
+### 3. Why
+
+for example if you walk 3km east and 4 km north and whats the length from the start to endpoint is  5 for that we have square 3x3 = 9 , 4 x4 = 16 = 25 sqrt = 5 this is done to identify the straight line distance
+
+### 4. Trap
+
+if its a zero vector , anything divided by zero is not possible so it throws zero division error to avoid this if we find length of any vector is 0 then return 0.0 to avoid crash
+
+### 5.

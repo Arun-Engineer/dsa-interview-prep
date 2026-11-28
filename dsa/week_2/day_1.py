@@ -94,3 +94,39 @@ assert pair_values_sum([], 300) == []
 assert pair_values_sum([10, 50, 100, 200], 500) == []
 assert pair_values_sum([100, 250, 300], 500) == []
 print("Task 1: All tests passed")
+
+# Restate: if the text is replaced form right to left if it forms or resemebles the same input text then that is a palindrome
+# Ask 1: what if the input is empty then it should return empty
+# Ask 2: what if any numerical is given like 1234 - > it should return only texts are allowed
+# start: 1:07 end 1:24
+
+def is_palindrome(text):
+
+    if not isinstance(text, str):
+        return "Only texts are allowed"
+
+    if text == "":
+        return True
+
+    if not text.isalpha():
+        return "Only texts are allowed"
+
+    text = text.lower()
+
+    reversed_text = []
+
+    for i in range(len(text) - 1, -1, -1):
+        reversed_text.append(text[i])
+
+    reversed_text = "".join(reversed_text)
+
+    return text == reversed_text
+
+assert is_palindrome("") == True
+assert is_palindrome("a") == True
+assert is_palindrome("abba") == True
+assert is_palindrome("ab") == False
+assert is_palindrome("Level") == True
+assert is_palindrome(1234) == "Only texts are allowed"
+assert is_palindrome("5678") == "Only texts are allowed"
+print("Task 2: All tests passed")

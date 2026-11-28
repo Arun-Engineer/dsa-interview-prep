@@ -10,3 +10,11 @@ Part A: all tests passed
 Part B: All tests passed
 
 [Done] exited with code=0 in 0.364 seconds
+
+
+[Running] python -u "e:\Automation\dsa_interview_prep\dsa\week_2\day_1.py"
+Part A: all tests passed
+Part B: All tests passed
+Task 1: All tests passed
+
+[Done] exited with code=0 in 0.172 seconds
